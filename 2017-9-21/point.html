@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document window screen DOM</title>
+	<style type="text/css">
+		html,body{
+			padding: 0px;
+			margin: 0px;
+			height: 2000px;
+		}
+		
+		#box{
+			margin: 100px 400px;
+			padding: 100px 0;
+			border: 50px dashed #CCC;
+			text-align:center;
+			box-sizing: content-box;
+		}
+		
+		table,td,th{
+			border: 1px solid #CCC;
+			border-collapse:collapse;
+			text-align: center;
+			padding: 5px;
+		}
+		
+		.can{
+			display: inline-block;
+			margin: 0 20px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div style="border: 1px solid blue;margin:10px;">
+		<div id="box">
+			<p style="width: 100px;height: 100px;background: blue;color: white;display: inline-block;line-height: 100px; ">box-content</p>
+		</div>
+	</div>
+	<div id="rs"></div>
+	<script type="text/javascript">
+		//滚动条可滚动高度为，文档的高度（document.body.scrollHeight） - 屏幕可视区的高度（window.innerHeight）
+		//所以，欲将滚动条置于低端的语句是
+		//document.body.scrollTop = document.body.scrollHeight - window.innerHeight
+		//window.scrollTo(0,document.body.scrollHeight - window.innerHeight)
+
+		let getWindowAttr = () => {
+			return {
+				innerWidth:window.innerWidth,		//窗口可视区域（能够看的见的屏幕，比如缩小之后，宽度高度都变化）的宽度
+				innerHeight:window.innerHeight,		//窗口可视区域的高度
+				outerWidth:window.outerWidth,		//包括工具条与滚动条
+				outerHeight:window.outerHeight,		//包括工具条与滚动条
+				screenTop:window.screenTop,			//窗口左上角距离电脑屏幕顶端的距离
+				screenLeft:window.screenLeft,		//窗口左上角距离电脑屏幕左端的距离
+			}
+		}
+
+		let getDomAttr = ele => {
+			if(!ele){
+				ele = document.body;
+			}
+			let bound = ele.getBoundingClientRect();
+			let str = `width: ${bound.width},height: ${bound.height},top: ${bound.top},bottom: ${bound.bottom},left: ${bound.left},right: ${bound.right},`;
+			return {
+				clientWidth:ele.clientWidth,		//body可视区域（即body在页面上能看的见部分）的宽度(包括box-content,padding)
+				clientHeight:ele.clientHeight,	//body可视区域（即body在页面上能看的见部分）的高度
+				offsetWidth:ele.offsetWidth,		//同于clientWidth，但是包含边框的宽度(包括padding,box-content,border)
+				offsetHeight:ele.offsetHeight,	//同于clientHeight，但是包含边框的宽度
+				clientTop:ele.clientTop,		//boder的宽度
+				clientLeft:ele.clientLeft,	//boder的宽度
+				getBoundingClientRect:str,	//盒子的宽度、高度(不包含margin)、top、left、right、botom(注意：left、right计算时，以元素可视区（包含padding，包含border）的左上角为原点计算，top、bottom以左下脚为原点，其中width:left+right;height:bottom-top;)
+				getClientRect:ele.getClientRects(),
+			}
+		}
+
+		let getScreenAttr = () => {
+			return {
+				width:screen.width,		
+				height:screen.height,	//电脑屏幕的高度，包含任务栏的高度
+				availWidth:screen.availWidth,
+				availHeight:screen.availHeight,	//电脑屏幕的高度，不包含任务栏的高度
+				availTop:screen.availTop,		//未被系统部件占用的最上方的像素值（只读）（不懂）
+				availLeft:screen.availLeft,		//	未被系统部件占用的最左侧的像素值（只读）（不懂）
+			}
+		}
+
+		//滚动条滚动的高度 = 文档的高度 - 可视区（box）的高度
+		let getScrollAttr = () => {
+			return {
+				scrollTop:document.body.scrollTop,			//竖立方向的滚动条距离文档顶端的距离
+				scrollLeft:document.body.scrollLeft,		//横立方向的滚动条距离文档左端的距离
+				scrollWidth:document.body.scrollWidth,		//文档的宽度,包含box-content,padding
+				scrollHeight:document.body.scrollHeight,	//文档的高度,包含box-content,padding
+			}
+		}
+		
+		let createTable = (type,data) => {
+			let header = ['Attribute','Value'];
+			let fragment = document.createDocumentFragment();
+			
+			let box = document.createElement('div');
+			box.className = 'can';
+			let div = document.createElement('h3');
+			let title = document.createTextNode(type);
+			div.appendChild(title);
+			box.appendChild(div)
+
+			let table = document.createElement('table');
+			let tr = document.createElement('tr');
+			for(let val of header){
+				
+				let th = document.createElement('th');
+				let nodeText = document.createTextNode(val);
+				th.appendChild(nodeText);
+				tr.appendChild(th);
+				
+			}
+			table.appendChild(tr);
+
+			for(let attr in data){
+				let tr = document.createElement('tr');
+				let td1 = document.createElement('td');
+				let text1 = document.createTextNode(attr);
+				td1.appendChild(text1);
+				tr.appendChild(td1);
+
+				let td2 = document.createElement('td');
+				td2.style.width = '150px';
+				let text2 = document.createTextNode(data[attr]);
+				td2.appendChild(text2);
+				tr.appendChild(td2);
+
+				table.appendChild(tr);
+			}
+			box.appendChild(table);
+			fragment.appendChild(box);
+			document.getElementById('rs').appendChild(fragment);
+		}
+		
+		let init = () => {
+			createTable('window',getWindowAttr());
+			createTable('document',getDomAttr());
+			createTable('DOM-#box',getDomAttr(document.getElementById('box')));
+			createTable('screen',getScreenAttr());
+			createTable('scroll',getScrollAttr());
+		}
+
+		(()=>{
+			let rs = document.getElementById('rs');
+			let box = document.getElementById('box');
+			rs.style.position = 'fixed';
+			rs.style.left = '0px';
+			rs.style.bottom = '20px';
+
+			window.onload = init;
+			window.onscroll = function(e){
+				let docHeight = document.body.scrollHeight;
+				let winHeight = window.innerHeight;
+				let scrollTop = document.body.scrollTop;
+				if(scrollTop >= docHeight - winHeight){
+					document.body.scrollTop -= 1;
+					return;
+				}
+				let eles = document.querySelectorAll('.can')
+				for(let i = 0; i<eles.length;i++){
+					let ele = eles[i];
+					ele.parentNode.removeChild(ele);
+				}
+				init();
+
+			};				
+		})();
+	</script>
+</body>
+</html>
