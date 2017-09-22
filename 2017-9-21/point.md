@@ -79,15 +79,15 @@ let getDomAttr = ele => {
 ### clientTop、clientLeft
 这个两个API是用与计算盒子的border的宽度的，虽然从名称上看它们并不像与border有任何关系
 ### getBoundingClientRect
-不得不说的getBoundingClientRect，它会返回一个ClientRect对象，这个对象包含六个属性
-属性|描述
-----|----
-width|返回的是盒子的宽度，包括content、padding、border。需要注意的它不包含margin。
-heigh|返回的是盒子的高度，包括content、padding、border。需要注意的它不包含margin。
-top|返回的是盒子左上角距离浏览器工具条的垂直高度，**注意：**这里的左上角是border的左上角
-bottom|返回的是盒子左下角距离浏览器工具条的垂直高度，**注意：**这里的左下角是border的左下角
-left|返回的是盒子左上角距离浏览器最左侧的水平长度，**注意：**这里的左上角是border的左上角
-right|返回的是盒子左上角距离浏览器最右侧的水平长度，**注意：**这里的左上角是border的左上角
+不得不说的getBoundingClientRect，它会返回一个ClientRect对象，这个对象包含六个属性<br>
+|属性|描述|
+|----|----|
+|width|返回的是盒子的宽度，包括content、padding、border。需要注意的它不包含margin。|
+|heigh|返回的是盒子的高度，包括content、padding、border。需要注意的它不包含margin。|
+|top|返回的是盒子左上角距离浏览器工具条的垂直高度，**注意：**这里的左上角是border的左上角|
+|bottom|返回的是盒子左下角距离浏览器工具条的垂直高度，**注意：**这里的左下角是border的左下角|
+|left|返回的是盒子左上角距离浏览器最左侧的水平长度，**注意：**这里的左上角是border的左上角|
+|right|返回的是盒子左上角距离浏览器最右侧的水平长度，**注意：**这里的左上角是border的左上角|
 ### getClientRects
 与getBoundingClientRect类似，但是它返回的是一个ClientRectList对象
 
