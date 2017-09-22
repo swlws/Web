@@ -80,14 +80,12 @@ let getDomAttr = ele => {
 这个两个API是用与计算盒子的border的宽度的，虽然从名称上看它们并不像与border有任何关系
 ### getBoundingClientRect
 不得不说的getBoundingClientRect，它会返回一个ClientRect对象，这个对象包含六个属性<br>
-|属性|描述|
-|----|----|
-|width|返回的是盒子的宽度，包括content、padding、border。需要注意的它不包含margin。|
-|heigh|返回的是盒子的高度，包括content、padding、border。需要注意的它不包含margin。|
-|top|返回的是盒子左上角距离浏览器工具条的垂直高度，**注意：**这里的左上角是border的左上角|
-|bottom|返回的是盒子左下角距离浏览器工具条的垂直高度，**注意：**这里的左下角是border的左下角|
-|left|返回的是盒子左上角距离浏览器最左侧的水平长度，**注意：**这里的左上角是border的左上角|
-|right|返回的是盒子左上角距离浏览器最右侧的水平长度，**注意：**这里的左上角是border的左上角|
+ * width	返回的是盒子的宽度，包括content、padding、border。需要注意的它不包含margin
+ * heigh	返回的是盒子的高度，包括content、padding、border。需要注意的它不包含margin
+ * top	返回的是盒子左上角距离浏览器工具条的垂直高度，**注意：**这里的左上角是border的左上角
+ * bottom	返回的是盒子左下角距离浏览器工具条的垂直高度，**注意：**这里的左下角是border的左下角
+ * left	返回的是盒子左上角距离浏览器最左侧的水平长度，**注意：**这里的左上角是border的左上角
+ * right	返回的是盒子左上角距离浏览器最右侧的水平长度，**注意：**这里的左上角是border的左上角
 ### getClientRects
 与getBoundingClientRect类似，但是它返回的是一个ClientRectList对象
 
@@ -96,6 +94,7 @@ let getDomAttr = ele => {
 ## 滚动
 首先得先屡清楚一个概念，滚动与文档之间的计算关系，我们以body进行说明：
  > 可滚动的高度 = 文档的高度 - 窗口的高度（仅包含content的高度）
+ <br>
 当我们将文档替换成DOM元素时
  > 可滚动的高度 = DOM内文档的高度 - DOM的高度（仅包含content的高度）
 
