@@ -96,6 +96,7 @@ let getDomAttr = ele => {
  > 可滚动的高度 = 文档的高度 - 窗口的高度（仅包含content的高度）
  <br>
 当我们将文档替换成DOM元素时
+<br>
  > 可滚动的高度 = DOM内文档的高度 - DOM的高度（仅包含content的高度）
 
 ### 滚动高度的获取
