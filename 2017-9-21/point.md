@@ -1,58 +1,58 @@
-## Ç°ÑÔ
-ºÃ¾ÃÃ»Ğ´canvasÁË£¬×¼±¸ÓÃcanvas×ö¸ölogo£¬µ«ÊÇÍ»È»·¢ÏÖ¶ÔDOM½ÚµãµÄ¿í¶È¡¢¸ß¶ÈµÄ¼ÆËãÓĞµãÍü¼ÇÁË£¬ÖØĞÂ¸´Ï°ÏÂ°É¡£
+## å‰è¨€
+å¥½ä¹…æ²¡å†™canvasäº†ï¼Œå‡†å¤‡ç”¨canvasåšä¸ªlogoï¼Œä½†æ˜¯çªç„¶å‘ç°å¯¹DOMèŠ‚ç‚¹çš„å®½åº¦ã€é«˜åº¦çš„è®¡ç®—æœ‰ç‚¹å¿˜è®°äº†ï¼Œé‡æ–°å¤ä¹ ä¸‹å§ã€‚
 
 ---
-## ºĞ×ÓÄ£ĞÍ
-ÔÚÌÖÂÛ¿í¸ßÖ®Ç°£¬ÏÈËµÏÂCSSµÄºĞ×ÓÄ£ĞÍ£º
-Ã¿Ò»¸öºĞ×Ó¶¼¿ÉÒÔ·ÖÎª£ºcontent¡¢padding¡¢border¡¢marginËÄ¸ö²¿·Ö¡£
+## ç›’å­æ¨¡å‹
+åœ¨è®¨è®ºå®½é«˜ä¹‹å‰ï¼Œå…ˆè¯´ä¸‹CSSçš„ç›’å­æ¨¡å‹ï¼š
+æ¯ä¸€ä¸ªç›’å­éƒ½å¯ä»¥åˆ†ä¸ºï¼šcontentã€paddingã€borderã€marginå››ä¸ªéƒ¨åˆ†ã€‚
 ![box](http://img.blog.csdn.net/20170921195843863?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3dsOTc5NjIzMDc0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-ºĞ×ÓÄ£ĞÍ·ÖÎªÁ½ÖÖ£º±ê×¼ºĞ×ÓÄ£ĞÍºÍIEºĞ×ÓÄ£ĞÍ
-**Çø±ğ£º**
- 1.±ê×¼ºĞ×ÓÄ£ĞÍÖĞcontentÖĞ°üº¬content
- 2.IEºĞ×ÓÄ£ĞÍÖĞcontentÖĞ°üº¬content¡¢padding¡¢border
+ç›’å­æ¨¡å‹åˆ†ä¸ºä¸¤ç§ï¼šæ ‡å‡†ç›’å­æ¨¡å‹å’ŒIEç›’å­æ¨¡å‹
+**åŒºåˆ«ï¼š**
+ 1.æ ‡å‡†ç›’å­æ¨¡å‹ä¸­contentä¸­åŒ…å«content
+ 2.IEç›’å­æ¨¡å‹ä¸­contentä¸­åŒ…å«contentã€paddingã€border
 
 ---
-## ÀàĞÍ
-Ç°¶Ë¿í¸ß¼ÆËã×Ü¹²·ÖÎª¶ÔÆÁÄ»¡¢´°¿Ú¡¢ÎÄµµ£¨DOM½Úµã£©µÄ¼ÆËã
+## ç±»å‹
+å‰ç«¯å®½é«˜è®¡ç®—æ€»å…±åˆ†ä¸ºå¯¹å±å¹•ã€çª—å£ã€æ–‡æ¡£ï¼ˆDOMèŠ‚ç‚¹ï¼‰çš„è®¡ç®—
 
 ---
-## ÆÁÄ»
-ÕâÀïµÄÆÁÄ»ÊÇÖ¸µÄµçÄÔÏÔÊ¾Æ÷£¬Ã¿¸öÆÁÄ»µÄ¿í¸ß¶¼ÊÇ¹Ì¶¨Öµ
+## å±å¹•
+è¿™é‡Œçš„å±å¹•æ˜¯æŒ‡çš„ç”µè„‘æ˜¾ç¤ºå™¨ï¼Œæ¯ä¸ªå±å¹•çš„å®½é«˜éƒ½æ˜¯å›ºå®šå€¼
 
 ```
 let getScreenAttr = () => {
 	return {
 		width:screen.width,		
-		height:screen.height,	//µçÄÔÆÁÄ»µÄ¸ß¶È£¬°üº¬ÈÎÎñÀ¸µÄ¸ß¶È
+		height:screen.height,	//ç”µè„‘å±å¹•çš„é«˜åº¦ï¼ŒåŒ…å«ä»»åŠ¡æ çš„é«˜åº¦
 		availWidth:screen.availWidth,
-		availHeight:screen.availHeight,	//µçÄÔÆÁÄ»µÄ¸ß¶È£¬²»°üº¬ÈÎÎñÀ¸µÄ¸ß¶È
-		availTop:screen.availTop,		//Î´±»ÏµÍ³²¿¼şÕ¼ÓÃµÄ×îÉÏ·½µÄÏñËØÖµ£¨Ö»¶Á£©£¨²»¶®£©
-		availLeft:screen.availLeft,		//	Î´±»ÏµÍ³²¿¼şÕ¼ÓÃµÄ×î×ó²àµÄÏñËØÖµ£¨Ö»¶Á£©£¨²»¶®£©
+		availHeight:screen.availHeight,	//ç”µè„‘å±å¹•çš„é«˜åº¦ï¼Œä¸åŒ…å«ä»»åŠ¡æ çš„é«˜åº¦
+		availTop:screen.availTop,		//æœªè¢«ç³»ç»Ÿéƒ¨ä»¶å ç”¨çš„æœ€ä¸Šæ–¹çš„åƒç´ å€¼ï¼ˆåªè¯»ï¼‰ï¼ˆä¸æ‡‚ï¼‰
+		availLeft:screen.availLeft,		//	æœªè¢«ç³»ç»Ÿéƒ¨ä»¶å ç”¨çš„æœ€å·¦ä¾§çš„åƒç´ å€¼ï¼ˆåªè¯»ï¼‰ï¼ˆä¸æ‡‚ï¼‰
 	}
 }
 ```
-ÆäÖĞĞèÒª×¢ÒâµÄheightÓëavailHeightµÄÇø±ğ£ºheightµÄ¸ß¶È°üÀ¨ÆÁÄ»ÏÂ¶ËµÄÈÎÎñÀ¸µÄ¸ß¶È£¬availHeight²»°üº¬ÈÎÎñÀ¸µÄ¸ß¶È¡£
+å…¶ä¸­éœ€è¦æ³¨æ„çš„heightä¸availHeightçš„åŒºåˆ«ï¼šheightçš„é«˜åº¦åŒ…æ‹¬å±å¹•ä¸‹ç«¯çš„ä»»åŠ¡æ çš„é«˜åº¦ï¼ŒavailHeightä¸åŒ…å«ä»»åŠ¡æ çš„é«˜åº¦ã€‚
 
 ---
-## ´°¿Ú
-ÕâÀïµÄ´°¿ÚÖ¸µÄÊÇä¯ÀÀÆ÷Ò³Ãæ£¬´°¿ÚµÄ´óĞ¡¾ÍÊÇ´°¿ÚÊµ¼ÊËõ·ÅµÄ´óĞ¡£¬µ¥Î»ÎªÏñËØ
+## çª—å£
+è¿™é‡Œçš„çª—å£æŒ‡çš„æ˜¯æµè§ˆå™¨é¡µé¢ï¼Œçª—å£çš„å¤§å°å°±æ˜¯çª—å£å®é™…ç¼©æ”¾çš„å¤§å°ï¼Œå•ä½ä¸ºåƒç´ 
 ```
 let getWindowAttr = () => {
 	return {
-		innerWidth:window.innerWidth,		//´°¿Ú¿ÉÊÓÇøÓò£¨ÄÜ¹»¿´µÄ¼ûµÄÆÁÄ»£¬±ÈÈçËõĞ¡Ö®ºó£¬¿í¶È¸ß¶È¶¼±ä»¯£©µÄ¿í¶È
-		innerHeight:window.innerHeight,		//´°¿Ú¿ÉÊÓÇøÓòµÄ¸ß¶È
-		outerWidth:window.outerWidth,		//°üÀ¨¹¤¾ßÌõÓë¹ö¶¯Ìõ
-		outerHeight:window.outerHeight,		//°üÀ¨¹¤¾ßÌõÓë¹ö¶¯Ìõ
-		screenTop:window.screenTop,			//´°¿Ú×óÉÏ½Ç¾àÀëµçÄÔÆÁÄ»¶¥¶ËµÄ¾àÀë
-		screenLeft:window.screenLeft,		//´°¿Ú×óÉÏ½Ç¾àÀëµçÄÔÆÁÄ»×ó¶ËµÄ¾àÀë
+		innerWidth:window.innerWidth,		//çª—å£å¯è§†åŒºåŸŸï¼ˆèƒ½å¤Ÿçœ‹çš„è§çš„å±å¹•ï¼Œæ¯”å¦‚ç¼©å°ä¹‹åï¼Œå®½åº¦é«˜åº¦éƒ½å˜åŒ–ï¼‰çš„å®½åº¦
+		innerHeight:window.innerHeight,		//çª—å£å¯è§†åŒºåŸŸçš„é«˜åº¦
+		outerWidth:window.outerWidth,		//åŒ…æ‹¬å·¥å…·æ¡ä¸æ»šåŠ¨æ¡
+		outerHeight:window.outerHeight,		//åŒ…æ‹¬å·¥å…·æ¡ä¸æ»šåŠ¨æ¡
+		screenTop:window.screenTop,			//çª—å£å·¦ä¸Šè§’è·ç¦»ç”µè„‘å±å¹•é¡¶ç«¯çš„è·ç¦»
+		screenLeft:window.screenLeft,		//çª—å£å·¦ä¸Šè§’è·ç¦»ç”µè„‘å±å¹•å·¦ç«¯çš„è·ç¦»
 	}
 }
 ```
-¼ÆËã´°¿ÚÎÒÃÇ³£ÓÃµÄÊÇinnerHeight£¨innerWidth£©ºÍouterHeight£¨outerWidth£©£¬Çø±ğÊÇËûÃÇÊÇ·ñ°üº¬¹¤¾ßÌõºÍ¹ö¶¯Ìõ¡£
+è®¡ç®—çª—å£æˆ‘ä»¬å¸¸ç”¨çš„æ˜¯innerHeightï¼ˆinnerWidthï¼‰å’ŒouterHeightï¼ˆouterWidthï¼‰ï¼ŒåŒºåˆ«æ˜¯ä»–ä»¬æ˜¯å¦åŒ…å«å·¥å…·æ¡å’Œæ»šåŠ¨æ¡ã€‚
 
 ---
-## ÎÄµµ£¨DOM½Úµã£©
-ÕâÀïµÄÎÄµµ£¨body£©ÊÇÖ¸Õû¸öµÄHTMLÒ³Ãæ£¬µ±È»Ò²¿ÉÒÔÓÃÈ¥¼ÆËãDOM½ÚµãµÄ¿í¸ß¡£
+## æ–‡æ¡£ï¼ˆDOMèŠ‚ç‚¹ï¼‰
+è¿™é‡Œçš„æ–‡æ¡£ï¼ˆbodyï¼‰æ˜¯æŒ‡æ•´ä¸ªçš„HTMLé¡µé¢ï¼Œå½“ç„¶ä¹Ÿå¯ä»¥ç”¨å»è®¡ç®—DOMèŠ‚ç‚¹çš„å®½é«˜ã€‚
 ```
 let getDomAttr = ele => {
 	if(!ele){
@@ -61,63 +61,63 @@ let getDomAttr = ele => {
 	let bound = ele.getBoundingClientRect();
 	let str = `width: ${bound.width},height: ${bound.height},top: ${bound.top},bottom: ${bound.bottom},left: ${bound.left},right: ${bound.right},`;
 	return {
-		clientWidth:ele.clientWidth,		//body¿ÉÊÓÇøÓò£¨¼´bodyÔÚÒ³ÃæÉÏÄÜ¿´µÄ¼û²¿·Ö£©µÄ¿í¶È(°üÀ¨box-content,padding)
-		clientHeight:ele.clientHeight,	//body¿ÉÊÓÇøÓò£¨¼´bodyÔÚÒ³ÃæÉÏÄÜ¿´µÄ¼û²¿·Ö£©µÄ¸ß¶È
-		offsetWidth:ele.offsetWidth,		//Í¬ÓÚclientWidth£¬µ«ÊÇ°üº¬±ß¿òµÄ¿í¶È(°üÀ¨padding,box-content,border)
-		offsetHeight:ele.offsetHeight,	//Í¬ÓÚclientHeight£¬µ«ÊÇ°üº¬±ß¿òµÄ¿í¶È
-		clientTop:ele.clientTop,		//boderµÄ¿í¶È
-		clientLeft:ele.clientLeft,	//boderµÄ¿í¶È
-		getBoundingClientRect:str,	//ºĞ×ÓµÄ¿í¶È¡¢¸ß¶È(²»°üº¬margin)¡¢top¡¢left¡¢right¡¢botom(×¢Òâ£ºleft¡¢right¼ÆËãÊ±£¬ÒÔÔªËØ¿ÉÊÓÇø£¨°üº¬padding£¬°üº¬border£©µÄ×óÉÏ½ÇÎªÔ­µã¼ÆËã£¬top¡¢bottomÒÔ×óÏÂ½ÅÎªÔ­µã£¬ÆäÖĞwidth:left+right;height:bottom-top;)
+		clientWidth:ele.clientWidth,		//bodyå¯è§†åŒºåŸŸï¼ˆå³bodyåœ¨é¡µé¢ä¸Šèƒ½çœ‹çš„è§éƒ¨åˆ†ï¼‰çš„å®½åº¦(åŒ…æ‹¬box-content,padding)
+		clientHeight:ele.clientHeight,	//bodyå¯è§†åŒºåŸŸï¼ˆå³bodyåœ¨é¡µé¢ä¸Šèƒ½çœ‹çš„è§éƒ¨åˆ†ï¼‰çš„é«˜åº¦
+		offsetWidth:ele.offsetWidth,		//åŒäºclientWidthï¼Œä½†æ˜¯åŒ…å«è¾¹æ¡†çš„å®½åº¦(åŒ…æ‹¬padding,box-content,border)
+		offsetHeight:ele.offsetHeight,	//åŒäºclientHeightï¼Œä½†æ˜¯åŒ…å«è¾¹æ¡†çš„å®½åº¦
+		clientTop:ele.clientTop,		//boderçš„å®½åº¦
+		clientLeft:ele.clientLeft,	//boderçš„å®½åº¦
+		getBoundingClientRect:str,	//ç›’å­çš„å®½åº¦ã€é«˜åº¦(ä¸åŒ…å«margin)ã€topã€leftã€rightã€botom(æ³¨æ„ï¼šleftã€rightè®¡ç®—æ—¶ï¼Œä»¥å…ƒç´ å¯è§†åŒºï¼ˆåŒ…å«paddingï¼ŒåŒ…å«borderï¼‰çš„å·¦ä¸Šè§’ä¸ºåŸç‚¹è®¡ç®—ï¼Œtopã€bottomä»¥å·¦ä¸‹è„šä¸ºåŸç‚¹ï¼Œå…¶ä¸­width:left+right;height:bottom-top;)
 		getClientRect:ele.getClientRects(),
 	}
 }
 ```
-### clientWidth¡¢clientHeight
-ĞèÒª×¢ÒâµÄÊÇÕâÁ½¸öAPIÔÚ¼ÆËãÊ±£¬Ö»¼ÆËãcontent¡¢paddingµÄÖµ¡£
-### offsetWidth¡¢offsetHeight
-ÕâÁ½¸öAPIÀàËÆÓë**clientWidth¡¢clientHeight**£¬Çø±ğÔÚÓÚËüÃÇ¼ÆËãÊ±»á½«borderµÄÖµ¼ÓÈë½øÈ¥
-### clientTop¡¢clientLeft
-Õâ¸öÁ½¸öAPIÊÇÓÃÓë¼ÆËãºĞ×ÓµÄborderµÄ¿í¶ÈµÄ£¬ËäÈ»´ÓÃû³ÆÉÏ¿´ËüÃÇ²¢²»ÏñÓëborderÓĞÈÎºÎ¹ØÏµ
+### clientWidthã€clientHeight
+éœ€è¦æ³¨æ„çš„æ˜¯è¿™ä¸¤ä¸ªAPIåœ¨è®¡ç®—æ—¶ï¼Œåªè®¡ç®—contentã€paddingçš„å€¼ã€‚
+### offsetWidthã€offsetHeight
+è¿™ä¸¤ä¸ªAPIç±»ä¼¼ä¸**clientWidthã€clientHeight**ï¼ŒåŒºåˆ«åœ¨äºå®ƒä»¬è®¡ç®—æ—¶ä¼šå°†borderçš„å€¼åŠ å…¥è¿›å»
+### clientTopã€clientLeft
+è¿™ä¸ªä¸¤ä¸ªAPIæ˜¯ç”¨ä¸è®¡ç®—ç›’å­çš„borderçš„å®½åº¦çš„ï¼Œè™½ç„¶ä»åç§°ä¸Šçœ‹å®ƒä»¬å¹¶ä¸åƒä¸borderæœ‰ä»»ä½•å…³ç³»
 ### getBoundingClientRect
-²»µÃ²»ËµµÄgetBoundingClientRect£¬Ëü»á·µ»ØÒ»¸öClientRect¶ÔÏó£¬Õâ¸ö¶ÔÏó°üº¬Áù¸öÊôĞÔ
-|ÊôĞÔ|ÃèÊö|
-|----|----|
-|width|·µ»ØµÄÊÇºĞ×ÓµÄ¿í¶È£¬°üÀ¨content¡¢padding¡¢border¡£ĞèÒª×¢ÒâµÄËü²»°üº¬margin¡£|
-|heigh|·µ»ØµÄÊÇºĞ×ÓµÄ¸ß¶È£¬°üÀ¨content¡¢padding¡¢border¡£ĞèÒª×¢ÒâµÄËü²»°üº¬margin¡£|
-|top|·µ»ØµÄÊÇºĞ×Ó×óÉÏ½Ç¾àÀëä¯ÀÀÆ÷¹¤¾ßÌõµÄ´¹Ö±¸ß¶È£¬**×¢Òâ£º**ÕâÀïµÄ×óÉÏ½ÇÊÇborderµÄ×óÉÏ½Ç|
-|bottom|·µ»ØµÄÊÇºĞ×Ó×óÏÂ½Ç¾àÀëä¯ÀÀÆ÷¹¤¾ßÌõµÄ´¹Ö±¸ß¶È£¬**×¢Òâ£º**ÕâÀïµÄ×óÏÂ½ÇÊÇborderµÄ×óÏÂ½Ç|
-|left|·µ»ØµÄÊÇºĞ×Ó×óÉÏ½Ç¾àÀëä¯ÀÀÆ÷×î×ó²àµÄË®Æ½³¤¶È£¬**×¢Òâ£º**ÕâÀïµÄ×óÉÏ½ÇÊÇborderµÄ×óÉÏ½Ç|
-|right|·µ»ØµÄÊÇºĞ×Ó×óÉÏ½Ç¾àÀëä¯ÀÀÆ÷×îÓÒ²àµÄË®Æ½³¤¶È£¬**×¢Òâ£º**ÕâÀïµÄ×óÉÏ½ÇÊÇborderµÄ×óÉÏ½Ç|
+ä¸å¾—ä¸è¯´çš„getBoundingClientRectï¼Œå®ƒä¼šè¿”å›ä¸€ä¸ªClientRectå¯¹è±¡ï¼Œè¿™ä¸ªå¯¹è±¡åŒ…å«å…­ä¸ªå±æ€§
+å±æ€§|æè¿°
+----|----
+width|è¿”å›çš„æ˜¯ç›’å­çš„å®½åº¦ï¼ŒåŒ…æ‹¬contentã€paddingã€borderã€‚éœ€è¦æ³¨æ„çš„å®ƒä¸åŒ…å«marginã€‚
+heigh|è¿”å›çš„æ˜¯ç›’å­çš„é«˜åº¦ï¼ŒåŒ…æ‹¬contentã€paddingã€borderã€‚éœ€è¦æ³¨æ„çš„å®ƒä¸åŒ…å«marginã€‚
+top|è¿”å›çš„æ˜¯ç›’å­å·¦ä¸Šè§’è·ç¦»æµè§ˆå™¨å·¥å…·æ¡çš„å‚ç›´é«˜åº¦ï¼Œ**æ³¨æ„ï¼š**è¿™é‡Œçš„å·¦ä¸Šè§’æ˜¯borderçš„å·¦ä¸Šè§’
+bottom|è¿”å›çš„æ˜¯ç›’å­å·¦ä¸‹è§’è·ç¦»æµè§ˆå™¨å·¥å…·æ¡çš„å‚ç›´é«˜åº¦ï¼Œ**æ³¨æ„ï¼š**è¿™é‡Œçš„å·¦ä¸‹è§’æ˜¯borderçš„å·¦ä¸‹è§’
+left|è¿”å›çš„æ˜¯ç›’å­å·¦ä¸Šè§’è·ç¦»æµè§ˆå™¨æœ€å·¦ä¾§çš„æ°´å¹³é•¿åº¦ï¼Œ**æ³¨æ„ï¼š**è¿™é‡Œçš„å·¦ä¸Šè§’æ˜¯borderçš„å·¦ä¸Šè§’
+right|è¿”å›çš„æ˜¯ç›’å­å·¦ä¸Šè§’è·ç¦»æµè§ˆå™¨æœ€å³ä¾§çš„æ°´å¹³é•¿åº¦ï¼Œ**æ³¨æ„ï¼š**è¿™é‡Œçš„å·¦ä¸Šè§’æ˜¯borderçš„å·¦ä¸Šè§’
 ### getClientRects
-ÓëgetBoundingClientRectÀàËÆ£¬µ«ÊÇËü·µ»ØµÄÊÇÒ»¸öClientRectList¶ÔÏó
+ä¸getBoundingClientRectç±»ä¼¼ï¼Œä½†æ˜¯å®ƒè¿”å›çš„æ˜¯ä¸€ä¸ªClientRectListå¯¹è±¡
 
 ---
-# Ó¦ÓÃ
-## ¹ö¶¯
-Ê×ÏÈµÃÏÈÂÅÇå³şÒ»¸ö¸ÅÄî£¬¹ö¶¯ÓëÎÄµµÖ®¼äµÄ¼ÆËã¹ØÏµ£¬ÎÒÃÇÒÔbody½øĞĞËµÃ÷£º
- > ¿É¹ö¶¯µÄ¸ß¶È = ÎÄµµµÄ¸ß¶È - ´°¿ÚµÄ¸ß¶È£¨½ö°üº¬contentµÄ¸ß¶È£©
-µ±ÎÒÃÇ½«ÎÄµµÌæ»»³ÉDOMÔªËØÊ±
- > ¿É¹ö¶¯µÄ¸ß¶È = DOMÄÚÎÄµµµÄ¸ß¶È - DOMµÄ¸ß¶È£¨½ö°üº¬contentµÄ¸ß¶È£©
+# åº”ç”¨
+## æ»šåŠ¨
+é¦–å…ˆå¾—å…ˆå±¡æ¸…æ¥šä¸€ä¸ªæ¦‚å¿µï¼Œæ»šåŠ¨ä¸æ–‡æ¡£ä¹‹é—´çš„è®¡ç®—å…³ç³»ï¼Œæˆ‘ä»¬ä»¥bodyè¿›è¡Œè¯´æ˜ï¼š
+ > å¯æ»šåŠ¨çš„é«˜åº¦ = æ–‡æ¡£çš„é«˜åº¦ - çª—å£çš„é«˜åº¦ï¼ˆä»…åŒ…å«contentçš„é«˜åº¦ï¼‰
+å½“æˆ‘ä»¬å°†æ–‡æ¡£æ›¿æ¢æˆDOMå…ƒç´ æ—¶
+ > å¯æ»šåŠ¨çš„é«˜åº¦ = DOMå†…æ–‡æ¡£çš„é«˜åº¦ - DOMçš„é«˜åº¦ï¼ˆä»…åŒ…å«contentçš„é«˜åº¦ï¼‰
 
-### ¹ö¶¯¸ß¶ÈµÄ»ñÈ¡
+### æ»šåŠ¨é«˜åº¦çš„è·å–
 ```
 let getScrollAttr = () => {
 	return {
-		scrollTop:document.body.scrollTop,			//ÊúÁ¢·½ÏòµÄ¹ö¶¯Ìõ¾àÀëÎÄµµ¶¥¶ËµÄ¾àÀë
-		scrollLeft:document.body.scrollLeft,		//ºáÁ¢·½ÏòµÄ¹ö¶¯Ìõ¾àÀëÎÄµµ×ó¶ËµÄ¾àÀë
-		scrollWidth:document.body.scrollWidth,		//ÎÄµµµÄ¿í¶È,°üº¬box-content,padding
-		scrollHeight:document.body.scrollHeight,	//ÎÄµµµÄ¸ß¶È,°üº¬box-content,padding
+		scrollTop:document.body.scrollTop,			//ç«–ç«‹æ–¹å‘çš„æ»šåŠ¨æ¡è·ç¦»æ–‡æ¡£é¡¶ç«¯çš„è·ç¦»
+		scrollLeft:document.body.scrollLeft,		//æ¨ªç«‹æ–¹å‘çš„æ»šåŠ¨æ¡è·ç¦»æ–‡æ¡£å·¦ç«¯çš„è·ç¦»
+		scrollWidth:document.body.scrollWidth,		//æ–‡æ¡£çš„å®½åº¦,åŒ…å«box-content,padding
+		scrollHeight:document.body.scrollHeight,	//æ–‡æ¡£çš„é«˜åº¦,åŒ…å«box-content,padding
 	}
 }
 ```
 
-**ĞèµÄÁôÒâµÄÊÇ£º** document.body.clientHeightÓëdocument.body.scrollHeight¶¼ÊÇ¿ÉÒÔ¼ÆËãÎÄµµµÄ¸ß¶È£¬ËûÃÇ¶¼ÊÇÖ»°üº¬contentºÍpadding£¬µ«ÊÇ½á¹û»¹ÊÇÓĞÏ¸Î¢µÄ²î±ğ£¬Ô­ÓÉÎ´²éµ½Ïà¹Ø×ÊÁÏ£¬Àí½âµÄÍ¬µÀÇë¸øÏÂ½âÊÍ
+**éœ€çš„ç•™æ„çš„æ˜¯ï¼š** document.body.clientHeightä¸document.body.scrollHeightéƒ½æ˜¯å¯ä»¥è®¡ç®—æ–‡æ¡£çš„é«˜åº¦ï¼Œä»–ä»¬éƒ½æ˜¯åªåŒ…å«contentå’Œpaddingï¼Œä½†æ˜¯ç»“æœè¿˜æ˜¯æœ‰ç»†å¾®çš„å·®åˆ«ï¼ŒåŸç”±æœªæŸ¥åˆ°ç›¸å…³èµ„æ–™ï¼Œç†è§£çš„åŒé“è¯·ç»™ä¸‹è§£é‡Š
 
 ---
 ## demo
-²âÊÔ±àĞ´µÄÒ»¸ödemo
-![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20170921200150389?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3dsOTc5NjIzMDc0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-### Ô´Âë£º
+æµ‹è¯•ç¼–å†™çš„ä¸€ä¸ªdemo
+![è¿™é‡Œå†™å›¾ç‰‡æè¿°](http://img.blog.csdn.net/20170921200150389?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3dsOTc5NjIzMDc0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+### æºç ï¼š
 ```
 <!DOCTYPE html>
 <html>
@@ -160,19 +160,19 @@ let getScrollAttr = () => {
 	</div>
 	<div id="rs"></div>
 	<script type="text/javascript">
-		//¹ö¶¯Ìõ¿É¹ö¶¯¸ß¶ÈÎª£¬ÎÄµµµÄ¸ß¶È£¨document.body.scrollHeight£© - ÆÁÄ»¿ÉÊÓÇøµÄ¸ß¶È£¨window.innerHeight£©
-		//ËùÒÔ£¬Óû½«¹ö¶¯ÌõÖÃÓÚµÍ¶ËµÄÓï¾äÊÇ
+		//æ»šåŠ¨æ¡å¯æ»šåŠ¨é«˜åº¦ä¸ºï¼Œæ–‡æ¡£çš„é«˜åº¦ï¼ˆdocument.body.scrollHeightï¼‰ - å±å¹•å¯è§†åŒºçš„é«˜åº¦ï¼ˆwindow.innerHeightï¼‰
+		//æ‰€ä»¥ï¼Œæ¬²å°†æ»šåŠ¨æ¡ç½®äºä½ç«¯çš„è¯­å¥æ˜¯
 		//document.body.scrollTop = document.body.scrollHeight - window.innerHeight
 		//window.scrollTo(0,document.body.scrollHeight - window.innerHeight)
 
 		let getWindowAttr = () => {
 			return {
-				innerWidth:window.innerWidth,		//´°¿Ú¿ÉÊÓÇøÓò£¨ÄÜ¹»¿´µÄ¼ûµÄÆÁÄ»£¬±ÈÈçËõĞ¡Ö®ºó£¬¿í¶È¸ß¶È¶¼±ä»¯£©µÄ¿í¶È
-				innerHeight:window.innerHeight,		//´°¿Ú¿ÉÊÓÇøÓòµÄ¸ß¶È
-				outerWidth:window.outerWidth,		//°üÀ¨¹¤¾ßÌõÓë¹ö¶¯Ìõ
-				outerHeight:window.outerHeight,		//°üÀ¨¹¤¾ßÌõÓë¹ö¶¯Ìõ
-				screenTop:window.screenTop,			//´°¿Ú×óÉÏ½Ç¾àÀëµçÄÔÆÁÄ»¶¥¶ËµÄ¾àÀë
-				screenLeft:window.screenLeft,		//´°¿Ú×óÉÏ½Ç¾àÀëµçÄÔÆÁÄ»×ó¶ËµÄ¾àÀë
+				innerWidth:window.innerWidth,		//çª—å£å¯è§†åŒºåŸŸï¼ˆèƒ½å¤Ÿçœ‹çš„è§çš„å±å¹•ï¼Œæ¯”å¦‚ç¼©å°ä¹‹åï¼Œå®½åº¦é«˜åº¦éƒ½å˜åŒ–ï¼‰çš„å®½åº¦
+				innerHeight:window.innerHeight,		//çª—å£å¯è§†åŒºåŸŸçš„é«˜åº¦
+				outerWidth:window.outerWidth,		//åŒ…æ‹¬å·¥å…·æ¡ä¸æ»šåŠ¨æ¡
+				outerHeight:window.outerHeight,		//åŒ…æ‹¬å·¥å…·æ¡ä¸æ»šåŠ¨æ¡
+				screenTop:window.screenTop,			//çª—å£å·¦ä¸Šè§’è·ç¦»ç”µè„‘å±å¹•é¡¶ç«¯çš„è·ç¦»
+				screenLeft:window.screenLeft,		//çª—å£å·¦ä¸Šè§’è·ç¦»ç”µè„‘å±å¹•å·¦ç«¯çš„è·ç¦»
 			}
 		}
 
@@ -183,13 +183,13 @@ let getScrollAttr = () => {
 			let bound = ele.getBoundingClientRect();
 			let str = `width: ${bound.width},height: ${bound.height},top: ${bound.top},bottom: ${bound.bottom},left: ${bound.left},right: ${bound.right},`;
 			return {
-				clientWidth:ele.clientWidth,		//body¿ÉÊÓÇøÓò£¨¼´bodyÔÚÒ³ÃæÉÏÄÜ¿´µÄ¼û²¿·Ö£©µÄ¿í¶È(°üÀ¨box-content,padding)
-				clientHeight:ele.clientHeight,	//body¿ÉÊÓÇøÓò£¨¼´bodyÔÚÒ³ÃæÉÏÄÜ¿´µÄ¼û²¿·Ö£©µÄ¸ß¶È
-				offsetWidth:ele.offsetWidth,		//Í¬ÓÚclientWidth£¬µ«ÊÇ°üº¬±ß¿òµÄ¿í¶È(°üÀ¨padding,box-content,border)
-				offsetHeight:ele.offsetHeight,	//Í¬ÓÚclientHeight£¬µ«ÊÇ°üº¬±ß¿òµÄ¿í¶È
-				clientTop:ele.clientTop,		//boderµÄ¿í¶È
-				clientLeft:ele.clientLeft,	//boderµÄ¿í¶È
-				getBoundingClientRect:str,	//ºĞ×ÓµÄ¿í¶È¡¢¸ß¶È(²»°üº¬margin)¡¢top¡¢left¡¢right¡¢botom(×¢Òâ£ºleft¡¢right¼ÆËãÊ±£¬ÒÔÔªËØ¿ÉÊÓÇø£¨°üº¬padding£¬°üº¬border£©µÄ×óÉÏ½ÇÎªÔ­µã¼ÆËã£¬top¡¢bottomÒÔ×óÏÂ½ÅÎªÔ­µã£¬ÆäÖĞwidth:left+right;height:bottom-top;)
+				clientWidth:ele.clientWidth,		//bodyå¯è§†åŒºåŸŸï¼ˆå³bodyåœ¨é¡µé¢ä¸Šèƒ½çœ‹çš„è§éƒ¨åˆ†ï¼‰çš„å®½åº¦(åŒ…æ‹¬box-content,padding)
+				clientHeight:ele.clientHeight,	//bodyå¯è§†åŒºåŸŸï¼ˆå³bodyåœ¨é¡µé¢ä¸Šèƒ½çœ‹çš„è§éƒ¨åˆ†ï¼‰çš„é«˜åº¦
+				offsetWidth:ele.offsetWidth,		//åŒäºclientWidthï¼Œä½†æ˜¯åŒ…å«è¾¹æ¡†çš„å®½åº¦(åŒ…æ‹¬padding,box-content,border)
+				offsetHeight:ele.offsetHeight,	//åŒäºclientHeightï¼Œä½†æ˜¯åŒ…å«è¾¹æ¡†çš„å®½åº¦
+				clientTop:ele.clientTop,		//boderçš„å®½åº¦
+				clientLeft:ele.clientLeft,	//boderçš„å®½åº¦
+				getBoundingClientRect:str,	//ç›’å­çš„å®½åº¦ã€é«˜åº¦(ä¸åŒ…å«margin)ã€topã€leftã€rightã€botom(æ³¨æ„ï¼šleftã€rightè®¡ç®—æ—¶ï¼Œä»¥å…ƒç´ å¯è§†åŒºï¼ˆåŒ…å«paddingï¼ŒåŒ…å«borderï¼‰çš„å·¦ä¸Šè§’ä¸ºåŸç‚¹è®¡ç®—ï¼Œtopã€bottomä»¥å·¦ä¸‹è„šä¸ºåŸç‚¹ï¼Œå…¶ä¸­width:left+right;height:bottom-top;)
 				getClientRect:ele.getClientRects(),
 			}
 		}
@@ -197,21 +197,21 @@ let getScrollAttr = () => {
 		let getScreenAttr = () => {
 			return {
 				width:screen.width,		
-				height:screen.height,	//µçÄÔÆÁÄ»µÄ¸ß¶È£¬°üº¬ÈÎÎñÀ¸µÄ¸ß¶È
+				height:screen.height,	//ç”µè„‘å±å¹•çš„é«˜åº¦ï¼ŒåŒ…å«ä»»åŠ¡æ çš„é«˜åº¦
 				availWidth:screen.availWidth,
-				availHeight:screen.availHeight,	//µçÄÔÆÁÄ»µÄ¸ß¶È£¬²»°üº¬ÈÎÎñÀ¸µÄ¸ß¶È
-				availTop:screen.availTop,		//Î´±»ÏµÍ³²¿¼şÕ¼ÓÃµÄ×îÉÏ·½µÄÏñËØÖµ£¨Ö»¶Á£©£¨²»¶®£©
-				availLeft:screen.availLeft,		//	Î´±»ÏµÍ³²¿¼şÕ¼ÓÃµÄ×î×ó²àµÄÏñËØÖµ£¨Ö»¶Á£©£¨²»¶®£©
+				availHeight:screen.availHeight,	//ç”µè„‘å±å¹•çš„é«˜åº¦ï¼Œä¸åŒ…å«ä»»åŠ¡æ çš„é«˜åº¦
+				availTop:screen.availTop,		//æœªè¢«ç³»ç»Ÿéƒ¨ä»¶å ç”¨çš„æœ€ä¸Šæ–¹çš„åƒç´ å€¼ï¼ˆåªè¯»ï¼‰ï¼ˆä¸æ‡‚ï¼‰
+				availLeft:screen.availLeft,		//	æœªè¢«ç³»ç»Ÿéƒ¨ä»¶å ç”¨çš„æœ€å·¦ä¾§çš„åƒç´ å€¼ï¼ˆåªè¯»ï¼‰ï¼ˆä¸æ‡‚ï¼‰
 			}
 		}
 
-		//¹ö¶¯Ìõ¹ö¶¯µÄ¸ß¶È = ÎÄµµµÄ¸ß¶È - ¿ÉÊÓÇø£¨box£©µÄ¸ß¶È
+		//æ»šåŠ¨æ¡æ»šåŠ¨çš„é«˜åº¦ = æ–‡æ¡£çš„é«˜åº¦ - å¯è§†åŒºï¼ˆboxï¼‰çš„é«˜åº¦
 		let getScrollAttr = () => {
 			return {
-				scrollTop:document.body.scrollTop,			//ÊúÁ¢·½ÏòµÄ¹ö¶¯Ìõ¾àÀëÎÄµµ¶¥¶ËµÄ¾àÀë
-				scrollLeft:document.body.scrollLeft,		//ºáÁ¢·½ÏòµÄ¹ö¶¯Ìõ¾àÀëÎÄµµ×ó¶ËµÄ¾àÀë
-				scrollWidth:document.body.scrollWidth,		//ÎÄµµµÄ¿í¶È,°üº¬box-content,padding
-				scrollHeight:document.body.scrollHeight,	//ÎÄµµµÄ¸ß¶È,°üº¬box-content,padding
+				scrollTop:document.body.scrollTop,			//ç«–ç«‹æ–¹å‘çš„æ»šåŠ¨æ¡è·ç¦»æ–‡æ¡£é¡¶ç«¯çš„è·ç¦»
+				scrollLeft:document.body.scrollLeft,		//æ¨ªç«‹æ–¹å‘çš„æ»šåŠ¨æ¡è·ç¦»æ–‡æ¡£å·¦ç«¯çš„è·ç¦»
+				scrollWidth:document.body.scrollWidth,		//æ–‡æ¡£çš„å®½åº¦,åŒ…å«box-content,padding
+				scrollHeight:document.body.scrollHeight,	//æ–‡æ¡£çš„é«˜åº¦,åŒ…å«box-content,padding
 			}
 		}
 		
